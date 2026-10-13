@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML Beginner Assessment — Class Report (21 Sept)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FBFBF7; --ink:#16223C; --ink-soft:#4C5A77; --rule:#D9DCE2; --rule-soft:#ECEDF0;
+  --mark:#C2334D; --pass:#2C7A5B; --amber:#B4741B; --panel:#F2F2EC;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#10131A; --ink:#E8EAEF; --ink-soft:#9AA4B8; --rule:#2A3140; --rule-soft:#1D2330;
+    --mark:#F0748C; --pass:#5FC79B; --amber:#E0A44C; --panel:#171C26;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#10131A; --ink:#E8EAEF; --ink-soft:#9AA4B8; --rule:#2A3140; --rule-soft:#1D2330;
+  --mark:#F0748C; --pass:#5FC79B; --amber:#E0A44C; --panel:#171C26;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:66rem;margin:0 auto;padding:2.5rem 1.25rem 5rem}
+code,.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+header.masthead{border-bottom:2px solid var(--ink);padding-bottom:1.25rem;margin-bottom:2rem}
+.kicker{font-family:"IBM Plex Mono",monospace;font-size:.8125rem;color:var(--mark);letter-spacing:.02em}
+h1{font-size:clamp(1.9rem,5vw,2.9rem);line-height:1.08;margin:.4rem 0 .5rem;font-weight:700;letter-spacing:-.02em}
+.sub{color:var(--ink-soft);font-size:.95rem;margin:0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:2rem 0}
+.stat{background:var(--paper);padding:1rem 1.1rem}
+.stat .n{font-family:"IBM Plex Mono",monospace;font-size:1.75rem;font-weight:600;line-height:1.1;display:block}
+.stat .l{font-size:.8rem;color:var(--ink-soft);display:block;margin-top:.25rem}
+.stat.fail .n{color:var(--mark)} .stat.good .n{color:var(--pass)}
+h2{font-size:1.35rem;margin:3rem 0 .35rem;font-weight:600;letter-spacing:-.01em}
+h2:first-of-type{margin-top:2rem}
+.lede{color:var(--ink-soft);margin:0 0 1.25rem;max-width:62ch}
+.tablescroll{overflow-x:auto;border:1px solid var(--rule)}
+table{border-collapse:collapse;width:100%;min-width:44rem;font-size:.9rem}
+th,td{padding:.6rem .7rem;text-align:left;border-bottom:1px solid var(--rule-soft)}
+thead th{background:var(--panel);font-weight:600;font-size:.78rem;color:var(--ink-soft);border-bottom:1px solid var(--rule);position:sticky;top:0}
+tbody tr:last-child td{border-bottom:none}
+td.num,th.num{text-align:right;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+td.rank{font-family:"IBM Plex Mono",monospace;color:var(--ink-soft);width:2.5rem}
+td.name{font-weight:500}
+.total{font-weight:600}
+.verdict{font-family:"IBM Plex Mono",monospace;font-size:.78rem;padding:.1rem .45rem;border:1px solid currentColor;white-space:nowrap}
+.v-pass{color:var(--pass)} .v-fail{color:var(--mark)}
+.bar{height:.4rem;background:var(--rule-soft);position:relative;min-width:4.5rem}
+.bar i{position:absolute;inset:0 auto 0 0;background:var(--ink)}
+.bar.f i{background:var(--mark)}
+.items{border:1px solid var(--rule)}
+.item{display:grid;grid-template-columns:minmax(10rem,1fr) minmax(6rem,2fr) 4rem;gap:.9rem;align-items:center;padding:.6rem .9rem;border-bottom:1px solid var(--rule-soft)}
+.item:last-child{border-bottom:none}
+.item .lab{font-size:.88rem}
+.item .pct{font-family:"IBM Plex Mono",monospace;text-align:right;font-size:.88rem;font-variant-numeric:tabular-nums}
+.track{height:.55rem;background:var(--rule-soft)}
+.track i{display:block;height:100%;background:var(--pass)}
+.track i.mid{background:var(--amber)} .track i.low{background:var(--mark)}
+.student{border:1px solid var(--rule);margin-bottom:1rem}
+.student > summary{padding:.9rem 1rem;cursor:pointer;display:flex;flex-wrap:wrap;gap:.6rem;align-items:baseline;justify-content:space-between;list-style:none;background:var(--panel)}
+.student > summary::-webkit-details-marker{display:none}
+.student > summary::before{content:"+";font-family:"IBM Plex Mono",monospace;color:var(--ink-soft);margin-right:.5rem}
+.student[open] > summary::before{content:"–"}
+.student summary .who{font-weight:600}
+.student summary .who span{font-weight:400;color:var(--ink-soft);font-size:.85rem;margin-left:.5rem}
+.student summary .sc{font-family:"IBM Plex Mono",monospace;font-size:.9rem}
+.body{padding:1rem}
+.qgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:.1rem;background:var(--rule-soft);border:1px solid var(--rule-soft)}
+.q{background:var(--paper);padding:.55rem .7rem;font-size:.85rem}
+.q .qh{display:flex;justify-content:space-between;gap:.5rem;font-family:"IBM Plex Mono",monospace;font-size:.8rem;color:var(--ink-soft)}
+.q .qh b{color:var(--ink)}
+.q p{margin:.2rem 0 0;color:var(--ink-soft);line-height:1.45}
+.q.full .qh b{color:var(--pass)} .q.zero .qh b{color:var(--mark)}
+.note{margin-top:.9rem;padding:.75rem .85rem;border-left:3px solid var(--mark);background:var(--panel);font-size:.9rem}
+.note b{display:block;margin-bottom:.15rem}
+ul.plain{padding-left:1.1rem;max-width:62ch}
+ul.plain li{margin-bottom:.45rem}
+footer{margin-top:3.5rem;padding-top:1.25rem;border-top:1px solid var(--rule);font-size:.85rem;color:var(--ink-soft)}
+@media (max-width:540px){.item{grid-template-columns:1fr 3.5rem}.item .track{grid-column:1/-1;order:3}}
+:focus-visible{outline:2px solid var(--mark);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <div class="kicker">Assessment held 21 September 2026 &nbsp;·&nbsp; 19 students</div>
+  <h1>HTML Beginner Assessment — Batch 2</h1>
+  <p class="sub">Marked out of 80, same rubric as the 14 September sitting. Sections 1–4 auto-graded by Google Forms (40). Sections 5–6 hand-marked (40). Pass mark 50.</p>
+</header>
+
+<div class="stats" id="stats"></div>
+
+<h2>Results</h2>
+<p class="lede">Ranked by total, MCQ score from the Forms auto-grade, coding sections hand-marked line by line.</p>
+<div class="tablescroll">
+  <table id="results">
+    <thead><tr><th class="num">#</th><th>Student</th><th>Roll no.</th><th class="num">MCQ /40</th><th class="num">Coding /25</th><th class="num">Mini page /15</th><th class="num">Total /80</th><th class="num">%</th><th></th><th>Result</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<h2>Where this class lost marks</h2>
+<p class="lede">Same pattern as the 14 September group: theory is strong, hand-written syntax is where marks disappear — and the link and form-input questions were the worst hit.</p>
+<div class="items" id="items"></div>
+
+<h2>Individual papers</h2>
+<p class="lede">Open a student to see the mark and reasoning for every hand-marked question.</p>
+<div id="students"></div>
+
+<h2>What to do next</h2>
+<ul class="plain">
+  <li><b>"href" is still the single worst-spelt attribute in the class</b> — herf, hrep, sre. It's the same fault as the 14 September batch. Worth a five-minute drill at the start of the next lesson specifically on this one word, since it's costing marks across nearly every link question.</li>
+  <li><b>The "=" sign is being dropped between attribute name and value</b> in a large minority of papers — <code>type"text"</code>, <code>src picture.jpg</code>, <code>target-blank</code>. Jahangir Khan and Ibrahim Khan lose most of their coding marks to this single habit. Show the shape as name=value with no gaps.</li>
+  <li><b>&lt;th&gt; is still being skipped</b> in most tables — students build correct rows and cells but leave the header row as plain <code>&lt;td&gt;</code>. Same fix as last time: a short table-only drill with a required header row.</li>
+  <li><b>Four students need a re-test:</b> SHOAIB REHMAN (33.5), Hameed ullah (41.5), awais (43.5), and Muhammad idrees (48). All four are inventing tag names that don't exist (&lt;hyref&gt;, &lt;selected&gt;, &lt;optional&gt;) rather than misspelling real ones — a sign they haven't yet memorised the actual tag set. Best fixed with copy-then-modify exercises before a re-sit.</li>
+  <li><b>Several roll numbers repeat</b> (multiple students entered "0000" or "000000"). Worth asking the class to re-submit their actual roll numbers so the record is usable later.</li>
+</ul>
+
+<footer>
+  Class average 62.0 / 80 (78%) — close to the 14 September group's 77%. 15 of 19 passed; 4 fell below 50.
+</footer>
+</div>
+
+<script>
+const MAX={q36:5,q37:2,q38:3,q39:3,q40:2,q41:4,q42:3,q43:3,q44:15};
+const QT={q36:"Q36 Basic structure",q37:"Q37 Heading + paragraph",q38:"Q38 Unordered list",q39:"Q39 Link",q40:"Q40 Image",q41:"Q41 Table",q42:"Q42 Form inputs",q43:"Q43 Dropdown",q44:"Q44 Mini page"};
+
+const S=[
+{n:"Zeeshan Khan",id:"000000",mcq:39,
+ q36:[5,"Complete and correct."],q37:[2,"Correct."],q38:[3,"Correct."],
+ q39:[2,"Tag and target=\"_blank\" correct, but href is a broken path (\".//https.www.google.com\") and closing is /a> instead of </a>."],
+ q40:[2,"Correct."],
+ q41:[3,"Rows and data correct; header row built with <td> instead of <th>."],
+ q42:[1,"<input =\"text\"/> and <input =\"number\"/> — the word \"type\" itself is missing before the equals sign."],
+ q43:[3,"Correct."],
+ q44:[10.5,"Structure, heading, paragraph, bold, italic, list and image all correct. Link repeats the /a> closing fault. Table has data but no <th>. Both inputs use the same missing-\"type\" fault as Q42."],
+ note:"Only MCQ miss was Q21 — newtab=\"true\" isn't a real attribute; it's target=\"_blank\". Same fault shows up in his own code, so it's worth confirming he's seen the correct version, not just the question."},
+
+{n:"Zahooruddin",id:"0000",mcq:39,
+ q36:[5,"Complete and correct."],q37:[2,"Correct."],q38:[3,"Correct."],q39:[3,"Correct — the cleanest link answer in this batch."],q40:[2,"Correct."],q41:[4,"Correct, with proper <th> headers."],q42:[3,"Correct."],q43:[3,"Correct — correctly adds a disabled default option too."],
+ q44:[14.5,"Every element present and mostly well-formed. Only flaw: the bold tag is closed as </> instead of </b>."],
+ note:"Top of this batch, and it isn't close — full marks on five of the eight coding questions. Ready to move on to CSS. Only MCQ slip was Q30 (chose \"<h1> tag allowed nahi hai\" instead of \"closing tag missing hai\")."},
+
+{n:"Muhammad Sajjad",id:"0000",mcq:39,
+ q36:[4.5,"All five elements present; <title> written as <title =\"First web\"> with no closing tag."],
+ q37:[2,"Correct."],q38:[3,"Correct — extra h1 doesn't hurt."],
+ q39:[1,"href value is the literal word \"link\", not a URL, and target=\"Blank\" is missing the underscore."],
+ q40:[2,"Correct."],
+ q41:[3,"Headers correctly use <th>; one data row closed with <tr> instead of </tr>."],
+ q42:[3,"Correct."],q43:[3,"Correct."],
+ q44:[12,"Good spread of elements — heading, paragraph, bold, italic, list, image, inputs, dropdown all present. The link tag is missing its closing bracket entirely, the table uses <li> tags inside <tr> instead of <td>, and the dropdown nests <select> repeatedly instead of using one <select> with multiple <option>s."],
+ note:"Chose <link> instead of <a> on the MCQ for \"link create karne ke liye\" (Q19) — worth revisiting, since his own code elsewhere correctly uses <a>, so this looks like a slip rather than a real gap."},
+
+{n:"Ibrahim Khan",id:"000000",mcq:33,
+ q36:[4,"html, body, h1, p all correct; <tital> is a misspelling of <title> so it doesn't register as a real tag."],
+ q37:[2,"Correct."],q38:[3,"Correct."],
+ q39:[1,"href value \" http.google.com\" is missing the :// and has a stray space; target=\"-blank\" uses a dash instead of an underscore."],
+ q40:[0.5,"Attribute written as sre instead of src, so the image never loads."],
+ q41:[4,"Correct — <th> headers, correct data, despite a border-attribute typo that doesn't affect grading."],
+ q42:[0.5,"Both inputs use text=\"...\" where type=\"...\" was needed."],
+ q43:[3,"Correct."],
+ q44:[9.5,"Heading, paragraph, bold, italic and list all correct. Link has no target=\"_blank\". Table has <th> but the data cells are wrongly closed with </th>. Both inputs repeat the text= instead of type= fault, and the dropdown has no target-city issue."],
+ note:"Knows structure well but consistently reaches for the wrong attribute name (sre, text=, tital) rather than the correct one. A short reference sheet of the five or six attribute names he needs would likely fix most of this at once."},
+
+{n:"Yaman Afzal",id:"00000000",mcq:39,
+ q36:[5,"Complete and correct."],q37:[2,"Correct."],q38:[3,"Correct."],
+ q39:[2.5,"href and target=\"_blank\" both correct; only fault is closing with <a/> instead of </a>."],
+ q40:[2,"Correct."],q41:[4,"Correct, proper <th> headers."],q42:[3,"Correct, including labels."],q43:[3,"Correct."],
+ q44:[13,"Heading, paragraph, bold, italic, image, table and both inputs all correct. List items are closed with </i> instead of </li> — likely a copy-paste slip from the italic tag just above. Link repeats the <a/> closing fault; number input is missing its closing bracket."],
+ note:"Strong, consistent paper. The </i> instead of </li> mistake in the list is worth flagging directly — it suggests he copied the wrong closing tag rather than not knowing how lists work, since his Q38 list a few lines above is perfect."},
+
+{n:"Jahangir Khan",id:"0000",mcq:38,
+ q36:[4.5,"All five elements present; the paragraph is never closed with </p>."],
+ q37:[2,"Correct — no body wrapper, but not required here."],q38:[3,"Correct."],
+ q39:[0.5,"No equals signs at all: href \"https://...\" and Target__blank instead of href=\"...\" target=\"_blank\"."],
+ q40:[0.5,"Same fault: src \" image salman khan .jpg\" with no equals sign and a filename with spaces."],
+ q41:[2,"Data rows and cells correct; the header row nests <td> inside <th> instead of writing header text directly in <th>."],
+ q42:[0.5,"Missing equals signs on type and Placeholder throughout."],
+ q43:[0.5,"Each option wrapped in its own <select> tag rather than one <select> holding three <option> tags."],
+ q44:[9,"Structure, headings, paragraph, bold and italic and list all correct. Link, image, inputs and dropdown are all missing their equals signs, so none of them actually work as written."],
+ note:"One habit — dropping the = between an attribute name and its value — accounts for almost every lost coding mark. This is worth a dedicated five-minute fix: name=\"value\", no exceptions, no spaces."},
+
+{n:"Noor Muhammad",id:"0000",mcq:40,
+ q36:[4.5,"All five elements present; the paragraph is left unclosed."],
+ q37:[1.5,"Paragraph text matches (\"I am learning HTML\"), but the heading reads \"Hello World!\" rather than \"My First Website\"."],
+ q38:[3,"Correct."],
+ q39:[1,"Attribute written as hrep instead of href; target=_blank has no quotes, which still often works but the destination itself is broken."],
+ q40:[0.5,"src is left entirely blank (just spaces)."],
+ q41:[2,"<th> used but placed outside any <tr>; only one data row given."],
+ q42:[1,"Text input present and correct; second input uses type=\"date\" rather than type=\"number\"."],
+ q43:[0,"No <select> wrapper at all — three bare <option> tags with attribute-style content instead of text."],
+ q44:[9.5,"Heading, paragraph, italic and list all correct, though list items aren't closed properly and bold is closed with </p> instead of </b>. More seriously, the document closes </html> in the middle of the page — everything after that (the link, image, table, and both inputs) sits outside the actual page and won't render as part of it."],
+ note:"Perfect MCQ score (40/40) but the coding half tells a different story — the biggest single issue is closing </html> too early in Q44, which orphans half the required elements. Worth showing him the finished page rendered in a browser so he can see visually that the second half disappears."},
+
+{n:"Muhammmad salman",id:"0000",mcq:39,
+ q36:[5,"Complete and correct."],q37:[2,"Correct."],q38:[3,"Correct."],
+ q39:[1,"href has a stray extra dot (\"https://.google.com\"), and trange_blanck is not a real attribute."],
+ q40:[1.5,"src correct; alt is placed outside the tag instead of inside it."],
+ q41:[1.5,"Four columns used instead of two, with Name/Name/Age/age duplicated — no <th>, and the pairing of names to ages is unclear."],
+ q42:[1,"Text input correct; number input uses type=\"Date\" instead of type=\"number\"."],
+ q43:[3,"Correct."],
+ q44:[10.5,"Heading, paragraph, bold, italic, list, image and dropdown all correct. Link syntax is badly broken (mismatched quotes), the table has only a header row with no data, and the number input is missing entirely."],
+ note:"Solid MCQ and clean basic-structure answers. The number input needs specific attention — type=\"Date\" was used twice in place of type=\"number\", so it looks like a genuine mix-up between the two rather than a typo."},
+
+{n:"Mudassir",id:"886435",mcq:40,
+ q36:[5,"All tags present. No specific text was required for Q36, so the empty <h1> and <p> are acceptable here."],
+ q37:[2,"Correct, with DOCTYPE included."],q38:[3,"Correct."],
+ q39:[1,"href has spaces inside the domain (\"google. com\"), and target=\" -blank\" has a leading space and a dash instead of an underscore."],
+ q40:[2,"Correct despite an extra space in the value."],q41:[4,"Correct, proper <th> headers."],q42:[3,"Correct."],q43:[3,"Correct."],
+ q44:[13,"Structure, heading, paragraph, bold, italic, list, image and both inputs all correct. Link is missing its closing tag. The table content (name/qualification rows) is correct but never wrapped in a <table> tag at all — just floating <tr>/<th>/<td>."],
+ note:"Near-perfect MCQ (40/40) and the strongest all-round paper apart from Zahooruddin. The missing <table> wrapper in Q44 is the only real structural gap — everything inside it is otherwise correct, so it's a quick fix to point out."},
+
+{n:"Eid Muhammad",id:"0000000",mcq:38,
+ q36:[4,"html, body, h1, p correct; <tittle> misspelled, and closed with the correctly spelled </title> — a mismatched pair."],
+ q37:[2,"Correct."],q38:[3,"Correct."],
+ q39:[2.5,"Tag, target=\"_blank\" and closing all correct; the href value has stray spaces (\" Google . com\")."],
+ q40:[1.5,"src correct; alt written as alt\"\" with no equals sign."],
+ q41:[3.5,"Correct <th> headers and data; one cell closed as <td>20<td> instead of </td>."],
+ q42:[0.5,"Uses text=\"\" as the attribute name in place of type=\"text\"/type=\"number\" on both inputs."],
+ q43:[1,"<select> wrapper is correct but every <option> is misspelled as <opection>."],
+ q44:[9.5,"Heading, paragraph, bold, italic and link+target all correct — his best answer in the paper. List item unclosed, image src is a placeholder value, table has <th> but is empty, and both inputs and the dropdown repeat the text= and <opection> faults from Q42/Q43."],
+ note:"Q20's MCQ was answered as \"Image show karna\" rather than \"Link ka destination define karna\" for what href does — worth checking since Q39 shows he can use href correctly in practice, so this may be a reading slip on the question rather than a real misunderstanding."},
+
+{n:"muhammad hashim",id:"00000000",mcq:37,
+ q36:[5,"Complete and correct."],q37:[2,"Correct."],q38:[3,"Correct — the placeholder text before it doesn't affect the actual list."],
+ q39:[0.5,"herf instead of href, no target attribute, and the URL itself is malformed (\"https../google.com\")."],
+ q40:[1,"src filename has spaces and no real extension; tag structure is otherwise fine."],
+ q41:[3,"<th>/<td> both used correctly, but the data is organised by column (names in one row, ages in the next) instead of by record."],
+ q42:[3,"Correct."],
+ q43:[1.5,"Options and content correct; <select>/<option> misspelled consistently as <slect>."],
+ q44:[10,"Heading, paragraph, bold, italic, list and both inputs correct. Link repeats the herf typo with no target. Table has a header row but the data pairing is unclear, and the dropdown repeats the <slect> misspelling with an unclosed option."],
+ note:"The repeated herf and slect misspellings across three separate answers suggest he's genuinely remembering these words wrong rather than mistyping — worth a direct correction rather than assuming it will self-correct."},
+
+{n:"ismail ahmad",id:"00000",mcq:37,
+ q36:[4,"html, body, h1, p correct; <title> opened twice instead of opened-then-closed, and there's no <head> wrapper."],
+ q37:[1.5,"Paragraph correctly discusses learning HTML; heading tag is malformed (<h1>...<h1 with no closing bracket) and its text doesn't match the requested heading."],
+ q38:[3,"Correct."],
+ q39:[1,"href is missing a colon (\"https.//google.com\"), and there's no target=\"_blank\" at all."],
+ q40:[1,"src value is a nonsensical placeholder rather than a filename, though the tag itself is valid."],
+ q41:[1,"Header row text sits directly inside <tr> tags with no <th>, and all four data cells are dumped in one unclosed row."],
+ q42:[0.5,"type=name and type=age are used instead of type=\"text\" and type=\"number\"."],
+ q43:[3,"Correct, aside from a spelling slip in the content (\"islambed\")."],
+ q44:[10,"Heading, paragraph, bold, both inputs and dropdown all correct. Italic is closed with <i/> instead of </i>. Link has no working target. Table content sits directly in <tr> without <td>/<th> wrapping it."],
+ note:"The dropdown and inputs work correctly in Q44 despite failing in Q42/Q43 — a sign the knowledge is there but inconsistently applied. Consistency, not new teaching, is what he needs."},
+
+{n:"muhammad abid",id:"00000000",mcq:38,
+ q36:[3.5,"html, head, title, body present; <h1> and <p> are both left empty and unclosed."],
+ q37:[2,"Correct."],q38:[3,"Correct."],
+ q39:[2,"Tag, href and closing all correct; target=\"blank\" is missing the underscore."],
+ q40:[2,"Correct."],
+ q41:[2.5,"Rows and data correct; header row uses <td> instead of <th>, and one cell is malformed (<tdAhmad> with a missing space)."],
+ q42:[3,"Correct."],q43:[3,"Correct."],
+ q44:[13,"Heading, paragraph, bold, italic, list, image, both inputs and dropdown all correct. Link is missing the underscore in target=\"blank\" again — the same fault as Q39. Table headers use <td>, not <th>."],
+ note:"A strong, consistent paper. The one repeating fault — target=\"blank\" instead of target=\"_blank\" — shows up in both the standalone link question and the mini page, so it's a clean, single thing to correct with him."},
+
+{n:"Hameed ullah",id:"0000",mcq:31,
+ q36:[3,"html, body, h1, p present; <tittle> is both misspelled and placed before <html> rather than inside a <head>."],
+ q37:[1,"Paragraph correct; heading opened as <h1> but closed as </h2> — a mismatched tag."],
+ q38:[0,"No list at all — the answer is an empty paragraph."],
+ q39:[0,"No <a> tag; instead an invented tag <hyref> holds a run-on, unparseable value."],
+ q40:[0.5,"src has no equals sign and the filename is garbled; the tag itself is at least recognisable as an attempt at <img>."],
+ q41:[0,"No table markup at all — the answer is a pair of <input> tags instead of rows and cells."],
+ q42:[0.5,"type =name and type =number' age./number> — neither is valid syntax and there's no working value."],
+ q43:[0,"Uses <selected> and <optional> throughout, neither of which are real HTML tags."],
+ q44:[5.5,"Heading, paragraph and italic are present and correct. Bold is opened twice without ever closing. The list has no <li> items, just plain text inside <ol>. Link, image, table, both inputs and the dropdown are all missing entirely."],
+ note:"Needs a re-test. He can produce a heading and a paragraph reliably, but the more specialised tags — links, tables, dropdowns — are being invented rather than recalled, which suggests he hasn't yet seen or practised them enough to remember the real names. Start with side-by-side copying of a working example before asking him to write from memory."},
+
+{n:"afnan ahmad",id:"00",mcq:37,
+ q36:[5,"All five present and correctly nested."],
+ q37:[1.5,"Paragraph correct; the heading reads \"hello\" rather than \"My First Website\"."],
+ q38:[2.5,"Correct content; closed with <ul/> instead of </ul>."],
+ q39:[0.5,"href value has spaces in the middle (\"/http Gog al\"), and target=-blank uses a dash with no quotes instead of target=\"_blank\"."],
+ q40:[1.5,"src filename (\"./gpg\") isn't valid, but the tag itself is well-formed."],
+ q41:[3,"Rows and data correct; header row built from <td> instead of <th>."],
+ q42:[1.5,"Text input correct; number input uses type=\"age\" instead of type=\"number\", and is missing its closing bracket."],
+ q43:[3,"Correct."],
+ q44:[10,"Heading, paragraph, italic, list and dropdown all correct. Bold is opened twice and never properly closed. Link repeats the target=-blank fault. Image src is left empty. Number input is missing entirely (only two text inputs given)."],
+ note:"type=\"age\" for the number input appears twice — in Q42 and again in Q44 — which makes it worth correcting directly rather than assuming it's a one-off typo."},
+
+{n:"SHOAIB REHMAN",id:"000000",mcq:23,
+ q36:[5,"Complete and correct — noticeably better than the rest of his paper."],
+ q37:[1,"Heading and paragraph tags are present, but neither has the requested content — the paragraph talks about digital marketing instead of learning HTML."],
+ q38:[0.5,"Uses <ul> tags in place of <li> for each item, and closes the whole thing with </ol> instead of </ul>."],
+ q39:[0,"Answered \"sorry sir\" — left blank."],
+ q40:[0,"Answered with the single word \"image\", no tag."],
+ q41:[0,"Answer is not a valid table in any recognisable form."],
+ q42:[0,"No working type or placeholder attribute on either input."],
+ q43:[0,"Uses <ul>/<il> tags instead of <select>/<option>."],
+ q44:[4,"Basic structure and heading present. Uses <bold> instead of <b> (not a real tag), <hyer> and <image> in place of <a> and <img> (also not real tags), and the answer ends with \"sorry sir\", indicating he didn't finish."],
+ note:"Needs a re-test, and probably some one-on-one time before that. His MCQ score (23/40) shows the basics — what a tag is, what body is for — aren't yet solid, which explains why the coding answers are built from invented tag names rather than real ones. Start from the fundamentals rather than jumping back into the practical sections."},
+
+{n:"yasir mehnaj",id:"00000",mcq:37,
+ q36:[3,"h1 and p present and correctly closed; <title> is placed so that it wraps around the entire <body>, when it should sit inside <head> instead."],
+ q37:[1,"Paragraph correct; heading uses <h2> instead of <h1>."],
+ q38:[0,"Uses <u> (underline) tags instead of <ul>/<li> — no list structure at all."],
+ q39:[0,"herf instead of href, a garbled URL, and no target attribute."],
+ q40:[0.5,"scr instead of src."],
+ q41:[2,"Data rows and cells correct, but there is no header row at all — just the two data rows."],
+ q42:[1.5,"Number input is correct; text input uses type=\" name\" instead of type=\"text\"."],
+ q43:[0.5,"<select> wrapper correct but empty — the three cities were never added as options."],
+ q44:[9,"Heading, paragraph, bold, italic, list and one input (number, correctly typed) all present. Link tag is badly malformed (herf typo, broken closing). Table has no header row. No image and no dropdown appear anywhere in the answer."],
+ note:"He passes, but only just, and it's almost entirely on the strength of a solid MCQ score — the coding answers are missing whole elements (no image, no dropdown) rather than just having syntax slips. Worth checking whether he ran out of time rather than assuming he doesn't know these tags."},
+
+{n:"Muhammad idrees",id:"000000",mcq:37,
+ q36:[1,"Only <html> is a real tag — <hello world> and <my country name is pakistan> are invented rather than the required <title>, <h1> and <p>."],
+ q37:[1,"Heading text sits inside <head> instead of a real <h1> tag; the paragraph is present and close to correct."],
+ q38:[1.5,"<ul> present and content correct, but none of the <li> tags are closed."],
+ q39:[0,"herf with no equals sign at all, and target=\"google\" instead of target=\"_blank\"."],
+ q40:[0.5,"scr instead of src, no equals sign, and a garbled filename."],
+ q41:[0.5,"No real <tr>/<td> structure — just quoted numbers as loose content."],
+ q42:[0.5,"type and placeholder are written outside the <input> tag as trailing text rather than as attributes inside it."],
+ q43:[0.5,"opction misspelled, and used as an attribute rather than a tag with content."],
+ q44:[5.5,"Heading, paragraph, bold and italic present and correct. List items present but empty and unclosed. No working link, and no image, table, or inputs appear at all."],
+ note:"Needs a re-test. The MCQ score (37) is solid, but the coding answers show he doesn't yet reliably know which words are real HTML tags — <hello world> and <my country name is pakistan> in Q36 are invented outright rather than misremembered. He'd benefit from typing out a working page from a printed example a few times before writing from memory again."},
+
+{n:"awais",id:"0000",mcq:32,
+ q36:[1,"Only <html> was written — nothing else."],
+ q37:[2,"Correct."],q38:[3,"Correct."],
+ q39:[0,"herf typo, malformed URL, no working closing tag, no target."],
+ q40:[0,"Attributes are written before the tag name itself (\"<img=... atl=...\"), so there's no valid <img> tag to recognise."],
+ q41:[1.5,"<th> and <td> are used, but swapped — the header row uses <td> and the data rows use <th>."],
+ q42:[0,"teyp instead of type, and the values are given as separate empty attributes rather than inside type=\"...\"."],
+ q43:[1,"The three cities are listed correctly as options, but the wrapper tag is misspelled inconsistently (<stelory> opening, </steiory> closing) instead of <select>."],
+ q44:[3,"<title> and both headings/paragraph tags are present, but the heading and paragraph are left completely empty. No bold, italic, list content, link, image, table, or inputs appear at all."],
+ note:"Needs a re-test. Q40's answer — attributes written before the tag name — suggests he isn't yet clear on what a tag actually is, separate from any particular typo. This is a more foundational gap than most of the class and is worth addressing directly rather than through more practice questions of the same kind."}
+];
+
+const band=t=>t>=72?"A":t>=64?"B":t>=56?"C":t>=50?"D":"—";
+S.forEach(s=>{
+  s.coding=["q36","q37","q38","q39","q40","q41","q42","q43"].reduce((a,k)=>a+s[k][0],0);
+  s.total=s.mcq+s.coding+s.q44[0];
+});
+S.sort((a,b)=>b.total-a.total);
+
+const avg=S.reduce((a,s)=>a+s.total,0)/S.length;
+const passed=S.filter(s=>s.total>=50).length;
+const top=S[0];
+document.getElementById("stats").innerHTML=[
+  ["Class average",avg.toFixed(1)+" / 80",""],
+  ["Passed (50+)",passed+" of "+S.length,"good"],
+  ["Below pass",(S.length-passed),"fail"],
+  ["Highest",top.total+" / 80",""],
+  ["MCQ average","91%",""],
+  ["Coding average","64%",""]
+].map(([l,n,c])=>`<div class="stat ${c}"><span class="n">${n}</span><span class="l">${l}</span></div>`).join("");
+
+document.querySelector("#results tbody").innerHTML=S.map((s,i)=>{
+  const p=Math.round(s.total/80*100), ok=s.total>=50;
+  return `<tr>
+    <td class="rank">${i+1}</td>
+    <td class="name">${s.n}</td>
+    <td class="mono" style="font-size:.82rem;color:var(--ink-soft)">${s.id}</td>
+    <td class="num">${s.mcq}</td>
+    <td class="num">${s.coding}</td>
+    <td class="num">${s.q44[0]}</td>
+    <td class="num total">${s.total}</td>
+    <td class="num">${p}%</td>
+    <td><span class="bar ${ok?"":"f"}"><i style="width:${p}%"></i></span></td>
+    <td><span class="verdict ${ok?"v-pass":"v-fail"}">${ok?"Pass · "+band(s.total):"Re-test"}</span></td>
+  </tr>`;
+}).join("");
+
+const parts=[["MCQ, Sections 1–4",91],["Q37 Heading + paragraph",86],["Q36 Basic structure",81],["Q38 Unordered list",82],["Q44 Mini page",64],["Q43 Dropdown",61],["Q41 Table",59],["Q40 Image",57],["Q42 Form inputs",47],["Q39 Link",34]];
+const barc=v=>v>=70?"":v>=55?"mid":"low";
+document.getElementById("items").innerHTML=parts.map(([l,v])=>
+  `<div class="item"><div class="lab">${l}</div><div class="track"><i class="${barc(v)}" style="width:${v}%"></i></div><div class="pct">${v}%</div></div>`).join("");
+
+document.getElementById("students").innerHTML=S.map(s=>{
+  const qs=Object.keys(MAX).map(k=>{
+    const [m,c]=s[k], cls=m===MAX[k]?"full":m===0?"zero":"";
+    return `<div class="q ${cls}"><div class="qh"><span>${QT[k]}</span><b>${m} / ${MAX[k]}</b></div><p>${c}</p></div>`;
+  }).join("");
+  return `<details class="student">
+    <summary><span class="who">${s.n}<span>roll ${s.id}</span></span>
+    <span class="sc">${s.total} / 80 · ${Math.round(s.total/80*100)}% · ${s.total>=50?"Pass "+band(s.total):"Re-test"}</span></summary>
+    <div class="body">
+      <div class="qgrid">${qs}</div>
+      <div class="note"><b>Teacher's comment</b>${s.note}</div>
+    </div>
+  </details>`;
+}).join("");
+</script>
+</body>
+</html>

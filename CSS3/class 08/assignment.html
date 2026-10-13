@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+
+    <style>
+
+        /* =========================
+           BODY
+        ========================= */
+
+        body {
+            background-color: #f2f6ff;
+            color: #222;
+
+            margin: 0;
+            padding: 20px;
+
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* =========================
+           MAIN CONTAINER
+        ========================= */
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            min-width: 300px;
+
+            margin: 20px auto;
+            padding: 25px;
+
+            background-color: white;
+
+            border: 2px solid #243b6b;
+            border-radius: 15px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+
+            text-align: center;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background-color: #243b6b;
+            color: white;
+
+            padding: 30px;
+
+            border-radius: 12px;
+
+            box-shadow: 0 5px 15px rgba(36, 59, 107, 0.4);
+        }
+
+
+        header h1 {
+            font-size: 40px;
+            font-weight: bold;
+
+            text-transform: uppercase;
+
+            letter-spacing: 5px;
+
+            margin: 10px;
+
+            text-shadow: 4px 4px 5px #111;
+        }
+
+
+        header p {
+            font-size: 18px;
+
+            font-style: italic;
+
+            word-spacing: 5px;
+
+            letter-spacing: 2px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           SECTION HEADINGS
+        ========================= */
+
+        h2 {
+            color: #243b6b;
+
+            font-size: 28px;
+
+            text-transform: uppercase;
+
+            text-decoration: underline;
+
+            text-align: center;
+
+            letter-spacing: 3px;
+
+            margin: 35px 10px 20px;
+        }
+
+
+        /* =========================
+           ABOUT SECTION
+        ========================= */
+
+        .about {
+            background-color: rgba(36, 59, 107, 0.08);
+
+            padding: 20px;
+
+            border-left: 5px solid #243b6b;
+
+            border-radius: 10px;
+
+            text-align: left;
+        }
+
+
+        .about p {
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            word-spacing: 3px;
+
+            letter-spacing: 0.5px;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skill {
+            display: inline-block;
+
+            width: 200px;
+
+            min-width: 180px;
+            max-width: 230px;
+
+            height: 180px;
+
+            min-height: 150px;
+            max-height: 220px;
+
+            margin: 10px;
+            padding: 20px;
+
+            background-color: #eef3ff;
+
+            border: 2px solid #243b6b;
+
+            border-radius: 15px;
+
+            vertical-align: top;
+
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+
+            transition: all 0.6s ease;
+        }
+
+
+        /* Hover Effect */
+
+        .skill:hover {
+            background-color: #243b6b;
+
+            color: white;
+
+            box-shadow: 0 10px 25px rgba(36, 59, 107, 0.5);
+
+            transform: translateY(-5px);
+        }
+
+
+        .skill h3 {
+            color: #243b6b;
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+        }
+
+
+        .skill:hover h3 {
+            color: white;
+
+            text-shadow: 2px 2px 4px #111;
+        }
+
+
+        .skill p {
+            font-size: 15px;
+
+            line-height: 1.5;
+
+            word-spacing: 2px;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .education {
+            background-color: #f8f9ff;
+
+            margin: 15px 0;
+
+            padding: 20px;
+
+            border: 2px solid #5069a0;
+
+            border-radius: 10px;
+
+            text-align: left;
+
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .education h3 {
+            color: #243b6b;
+
+            font-size: 21px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+        }
+
+
+        .education p {
+            font-size: 16px;
+
+            line-height: 1.7;
+
+            word-spacing: 3px;
+        }
+
+
+        /* =========================
+           HOBBIES
+        ========================= */
+
+        .hobby {
+            display: inline-block;
+
+            background-color: #243b6b;
+
+            color: white;
+
+            margin: 8px;
+
+            padding: 12px 20px;
+
+            border-radius: 20px;
+
+            border: 2px solid #162746;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: all 0.6s ease;
+        }
+
+
+        .hobby:hover {
+            background-color: #ffcc00;
+
+            color: #222;
+
+            border-radius: 5px;
+        }
+
+
+        /* =========================
+           ACHIEVEMENT
+        ========================= */
+
+        .achievement {
+            width: 80%;
+
+            max-width: 600px;
+
+            min-width: 250px;
+
+            height: 100px;
+
+            min-height: 80px;
+
+            max-height: 130px;
+
+            margin: 25px auto;
+
+            padding: 20px;
+
+            background-color: rgba(255, 204, 0, 0.25);
+
+            border: 2px solid #d6a900;
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 15px rgba(214, 169, 0, 0.3);
+
+            transition: all 0.6s ease;
+        }
+
+
+        .achievement:hover {
+            opacity: 0.8;
+
+            background-color: rgba(255, 204, 0, 0.6);
+
+            box-shadow: 0 10px 25px rgba(214, 169, 0, 0.5);
+        }
+
+
+        .achievement h3 {
+            color: #8a6a00;
+
+            font-size: 22px;
+
+            text-shadow: 2px 2px 3px #aaa;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background-color: #222;
+
+            color: white;
+
+            margin-top: 35px;
+
+            padding: 25px;
+
+            border-radius: 12px;
+        }
+
+
+        .contact h2 {
+            color: white;
+
+            margin: 10px;
+        }
+
+
+        .contact p {
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            word-spacing: 4px;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .contact-btn {
+            display: inline-block;
+
+            width: 150px;
+
+            height: 40px;
+
+            margin: 15px;
+
+            padding: 8px;
+
+            background-color: #ffcc00;
+
+            color: #222;
+
+            border: 2px solid #d6a900;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+            text-transform: uppercase;
+
+            transition: all 0.6s ease;
+        }
+
+
+        .contact-btn:hover {
+            background-color: #243b6b;
+
+            color: white;
+
+            border-radius: 20px;
+
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            margin-top: 25px;
+
+            padding: 15px;
+
+            background-color: #243b6b;
+
+            color: white;
+
+            border-radius: 8px;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           VISIBILITY EXAMPLE
+        ========================= */
+
+        .hidden-text {
+            visibility: hidden;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+
+
+        <!-- =========================
+             HEADER
+        ========================= -->
+
+        <header>
+
+            <h1>Ali Ahmed</h1>
+
+            <p>
+                Future Web Developer | Creative Learner | Tech Enthusiast
+            </p>
+
+        </header>
+
+
+
+        <!-- =========================
+             ABOUT ME
+        ========================= -->
+
+        <h2>About Me</h2>
+
+        <div class="about">
+
+            <p>
+                Hello! My name is Ali Ahmed. I am a student who is
+                interested in web development and technology.
+                I enjoy learning HTML and CSS and creating beautiful
+                and simple websites.
+            </p>
+
+            <p>
+                My goal is to become a professional web developer
+                and create useful websites for people.
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             SKILLS
+        ========================= -->
+
+        <h2>My Skills</h2>
+
+
+        <div class="skill">
+
+            <h3>HTML</h3>
+
+            <p>
+                I can create the structure of webpages using
+                HTML elements.
+            </p>
+
+        </div>
+
+
+        <div class="skill">
+
+            <h3>CSS</h3>
+
+            <p>
+                I can style webpages using colors, fonts,
+                borders and layouts.
+            </p>
+
+        </div>
+
+
+        <div class="skill">
+
+            <h3>JavaScript</h3>
+
+            <p>
+                I am learning JavaScript to make webpages
+                interactive.
+            </p>
+
+        </div>
+
+
+        <div class="skill">
+
+            <h3>Design</h3>
+
+            <p>
+                I enjoy creating simple and attractive
+                website designs.
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             EDUCATION
+        ========================= -->
+
+        <h2>Education</h2>
+
+
+        <div class="education">
+
+            <h3>School</h3>
+
+            <p>
+                Completed my school education with an interest
+                in computer science and technology.
+            </p>
+
+        </div>
+
+
+        <div class="education">
+
+            <h3>College</h3>
+
+            <p>
+                Currently studying computer science and improving
+                my programming skills.
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             HOBBIES
+        ========================= -->
+
+        <h2>My Hobbies</h2>
+
+
+        <span class="hobby">
+            💻 Coding
+        </span>
+
+
+        <span class="hobby">
+            🎮 Gaming
+        </span>
+
+
+        <span class="hobby">
+            📚 Reading
+        </span>
+
+
+        <span class="hobby">
+            🎨 Designing
+        </span>
+
+
+
+        <!-- =========================
+             ACHIEVEMENT
+        ========================= -->
+
+        <h2>My Achievement</h2>
+
+
+        <div class="achievement">
+
+            <h3>🏆 Completed My First Website</h3>
+
+            <p>
+                Successfully created my first complete HTML
+                and CSS website.
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             CONTACT
+        ========================= -->
+
+        <div class="contact">
+
+            <h2>Contact Me</h2>
+
+            <p>
+                📞 0300-1234567
+                <br>
+
+                ✉ ali@example.com
+                <br>
+
+                📍 Karachi, Pakistan
+            </p>
+
+
+            <button class="contact-btn">
+                Contact Me
+            </button>
+
+        </div>
+
+
+
+        <!-- =========================
+             FOOTER
+        ========================= -->
+
+        <footer>
+
+            <p>
+                © 2026 Ali Ahmed - My Personal Portfolio
+            </p>
+
+        </footer>
+
+
+        <!--
+            This element is intentionally hidden.
+            It demonstrates visibility: hidden;
+        -->
+
+        <p class="hidden-text">
+            This text is hidden using visibility: hidden;
+        -->
+
+
+    </div>
+
+</body>
+
+</html>

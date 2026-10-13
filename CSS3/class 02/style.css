@@ -1,0 +1,117 @@
+/*
+selectors
+1. type selector ==> kisi b ele ko osky name sy call krna
+2. id selector ==> id unique value ==> kisi b ele ko oski id sy get krna
+3. class selector ==> kisi b ele ko oski class sy get krna
+*/
+
+/*
+ - property
+    property name
+    property value
+
+
+*/
+
+/* h1 selector */
+/* { declaration */
+/* color: red; property */
+/* } */
+
+/* 
+h1 {
+    color: blue;
+    background-color: black;
+} */
+
+
+
+/* Get h1 element by id selector */
+/* # ki madad sy id target krty hai.... */
+
+/* #heading2{
+    color: red;
+} */
+
+
+/* get h1 element by class selector */
+/* .(dot) madad sy class selector */
+/* .heading{
+    color: blue;
+    background-color: black;
+} */
+
+
+/* Colors */
+
+/* color name
+hex code 
+RGB => Red , green ,blue ,, 0 to 255  */
+
+
+.newheading {
+    /* color: red; color name */
+    /* color: #C27AFF; HEX CODE */
+    /* color: rgb(120, 155, 80); */
+    /* color: rgb(5, 223, 114); */
+    /* background-color: #14eb31; */
+    /* color: #fff; */
+    /* color: rgb(255, 255, 255); */
+    /* background-color: ; */
+}
+
+.head1 {
+    font-size: 32px;
+}
+
+.para {
+    font-size: 32px;
+    /* text ka size */
+    font-weight: bold;
+    /* text ko bold */
+    font-style: italic;
+    /* text ko italic */
+
+
+    /* text-transform: uppercase; */
+    /* text-transform: lowercase; */
+}
+
+
+.intro {
+    text-transform: capitalize;
+}
+
+
+
+a {
+    /* remove underline using this prop and value */
+    text-decoration: none;
+}
+
+.intro2 {
+
+    color: red;
+    /*text red , underline black  */
+    /* text-decoration: underline #155DFC dashed ; */
+    /* text-decoration: underline #155DFC dotted ; */
+    /* text-decoration: underline #155DFC wavy ; */
+    /* text-decoration:  overline ; */
+    /* text-decoration:  line-through black wavy 5px ; */
+
+
+    /* text-decoration: underline; */
+    /* text-decoration: line-through; */
+    /* text-decoration: line-through dashed black 5px ; */
+
+    /* spacing prop */
+    /* word-spacing: 20px; */
+    /* letter-spacing: 20px; */
+    /* line-height: 50px ; */
+
+    /* background-color: black; */
+    /* text-align: center; */
+    /* text-align: right; */
+    text-align: left;
+
+}

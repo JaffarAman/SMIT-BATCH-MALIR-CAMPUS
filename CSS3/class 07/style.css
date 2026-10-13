@@ -1,0 +1,76 @@
+.container{
+        border: 1px solid black;
+        width: 40%;
+        margin: 20px auto;
+        padding: 24px;
+        border-radius: 8px;
+}
+
+
+.headingContainer{
+    background-color: #e63946;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+}
+
+.headingContainer p{
+    font-style: italic;
+}
+
+
+.menuHeading{
+    text-align: center;
+    color: #e63946;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+
+.card{
+    border: 1px solid #e63946;
+    padding: 16px;
+    width: 40%;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #fff3f3;
+    display: inline-block;
+    margin: 16px;
+
+}
+
+.card h3{
+    color: #e63946;
+}
+
+.price{
+    color: green;
+    font-weight: bold;
+}
+
+
+
+
+.card button{
+    background-color: #e63946;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.card button:hover{
+    background-color: black;
+}
+
+
+.footerContainer{
+    background-color: black;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+}
+

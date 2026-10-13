@@ -1,0 +1,51 @@
+/* type selector */
+/* h1{ */
+    /* color: red; */
+    /* color: rgb(185, 50, 90); */
+    /* color: rgb(91, 145, 245); */
+    /* color: #5b91f5; */
+    /* background-color: #5b91f5;
+    font-size: 50px;
+    font-weight: normal;
+    font-style: italic; */
+    /* text-transform: capitalize; */
+    /* text-transform: uppercase; */
+    /* text-transform: lowercase; */
+    /* text-decoration: underline line-through  red ;
+
+
+
+} */
+
+/* class selector  */
+.heading{
+    background-color: #5b91f5;
+    /* width: ; */
+    /* height: ; */
+
+    /* width: 600px;
+    height: 300px; */
+
+    /* width: 50%; */
+    /* width: 700px; */
+
+    /* width: 600px; */
+
+    /* width: 50%; */
+
+    /* height: 300px; */
+
+    /* height: 50%; */
+
+
+
+    /* max-width: 600px; */
+    min-width: 500px;
+
+
+
+}
+
+a{
+    background-color: red;
+}

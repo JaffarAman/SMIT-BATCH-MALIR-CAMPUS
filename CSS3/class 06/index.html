@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Bites</title>
+
+    <style>
+        body {
+            background-color: #f5f5f5;
+            color: #222;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            min-width: 300px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 30px;
+            border: 2px solid #333;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        header {
+            background-color: #e63946;
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        header h1 {
+            font-size: 35px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            font-style: italic;
+            word-spacing: 5px;
+        }
+
+        h2 {
+            color: #e63946;
+            font-size: 28px;
+            text-transform: uppercase;
+            text-decoration: underline;
+            letter-spacing: 2px;
+            margin: 30px;
+        }
+
+        .menu {
+            display: inline-block;
+            width: 40%;
+            min-width: 250px;
+            max-width: 350px;
+            height: 230px;
+            min-height: 200px;
+            max-height: 280px;
+
+            background-color: #fff3f3;
+
+            margin: 10px;
+            padding: 20px;
+
+            border: 2px solid #e63946;
+            border-radius: 12px;
+
+            vertical-align: top;
+        }
+
+        .menu h3 {
+            color: #e63946;
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .menu p {
+            font-size: 16px;
+            line-height: 1.6;
+            word-spacing: 3px;
+        }
+
+        .price {
+            color: #008000;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .order-btn {
+            background-color: #e63946;
+            color: white;
+
+            width: 130px;
+            height: 40px;
+
+            margin: 10px;
+            padding: 8px;
+
+            border: 2px solid #b71c1c;
+            border-radius: 8px;
+
+            cursor: pointer;
+            outline: none;
+
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .order-btn:hover {
+            background-color: #222;
+            color: #fff;
+        }
+
+        .contact {
+            background-color: #222;
+            color: white;
+
+            margin-top: 30px;
+            padding: 20px;
+
+            border-radius: 10px;
+        }
+
+        .contact h2 {
+            color: white;
+            margin: 10px;
+        }
+
+        .contact p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Tasty Bites</h1>
+            <p>Good Food, Good Mood!</p>
+        </header>
+
+
+        <h2>Our Menu</h2>
+
+
+        <!-- Burger -->
+        <div class="menu">
+            <h3>🍔 Beef Burger</h3>
+
+            <p>
+                Juicy beef burger with cheese,
+                fresh vegetables and special sauce.
+            </p>
+
+            <p class="price">Rs. 450</p>
+
+            <button class="order-btn">
+                Order Now
+            </button>
+        </div>
+
+
+        <!-- Pizza -->
+        <div class="menu">
+            <h3>🍕 Cheese Pizza</h3>
+
+            <p>
+                Delicious pizza loaded with cheese
+                and fresh toppings.
+            </p>
+
+            <p class="price">Rs. 700</p>
+
+            <button class="order-btn">
+                Order Now
+            </button>
+        </div>
+
+
+        <!-- Fries -->
+        <div class="menu">
+            <h3>🍟 Loaded Fries</h3>
+
+            <p>
+                Crispy fries topped with cheese
+                and our special sauce.
+            </p>
+
+            <p class="price">Rs. 250</p>
+
+            <button class="order-btn">
+                Order Now
+            </button>
+        </div>
+
+
+        <!-- Drink -->
+        <div class="menu">
+            <h3>🥤 Cold Drink</h3>
+
+            <p>
+                Chilled and refreshing drink
+                to complete your meal.
+            </p>
+
+            <p class="price">Rs. 150</p>
+
+            <button class="order-btn">
+                Order Now
+            </button>
+        </div>
+
+
+        <!-- Contact -->
+        <div class="contact">
+
+            <h2>Contact Us</h2>
+
+            <p>
+                📞 0300-1234567
+                <br>
+                📍 Karachi, Pakistan
+                <br>
+                ✉ tastybites@example.com
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

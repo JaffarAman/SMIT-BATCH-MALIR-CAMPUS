@@ -1,0 +1,128 @@
+/* h1{
+    color: red;
+} */
+
+/* Universal Selector */
+/* *{
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;
+} */
+
+/* universal selector */
+/* *{ */
+/* margin: 0px; */
+/* padding: 0; */
+/* color: red; */
+/* background-color: black; */
+/* } */
+
+/* type selector */
+/* body{ */
+/* color: blue;
+    margin: 0;
+    padding: 0; */
+/* background-color: black; */
+/* } */
+
+
+
+.para {
+    color: blue;
+    font-size: 18px;
+}
+
+.paraSpan {
+    color: red;
+    font-size: 34px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+
+
+/* Descendant Selector */
+/*  */
+.para span {
+    color: red;
+    font-size: 32px;
+}
+
+
+/* .courseList li{
+    color: red;
+} */
+
+
+/* child selector */
+/* .courseList > li{
+    color: red;
+} */
+
+
+/* child selector */
+/* .parent > p {
+    color: red;
+} */
+
+
+/* child selector */
+/* .newParent > p{
+    color: red;
+} */
+
+/* .newParent  p{
+    color: blue;
+} */
+
+
+
+/* .newParent div p{
+    color: green;
+} */
+
+
+/* h1{
+    color: red;
+    background-color: black; */
+/* opacity: ; 0, 0.1 , 0.2 0.3 ,,,,0.9, 1 */
+/* opacity: 0; */
+/* transition: all 0.6s ease ;
+
+} */
+
+
+/* h1:hover{ */
+/* opacity: 1; */
+
+/* background-color: blue;
+
+} */
+
+
+/* h1{
+    background-color: rgba(0 , 0 , 0 , 0.1);
+    color: red;
+} */
+
+
+h1 {
+    color: red;
+    /* text-shadow:  10px 10px 10px purple; */
+
+    text-shadow: 5px 10px 8px purple;
+    visibility: ;
+}
+
+
+.box1 {
+    /* background-color: red; */
+    width: 300px;
+    height: 200px;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    /* box-shadow: 50px 20px 10px black , -50px -20px 10px black ; */
+    /* box-shadow: -50px -10px 10px black; */
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    
+}

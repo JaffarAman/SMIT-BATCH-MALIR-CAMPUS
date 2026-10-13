@@ -1,0 +1,140 @@
+.box1{
+    width: 250px;
+    height: 250px;
+    background-color: lightblue;
+    /* color: ; */
+
+    /* overflow: hidden; */
+    /* overflow: scroll; */
+    /* overflow: auto; */
+    /* overflow-y: auto; */
+
+}
+
+
+/* .list {
+    border: 1px solid black; */
+    /* list-style-type: decimal; */
+    /* list-style-type: circle; */
+    /* list-style-type: lower-alpha; */
+    /* list-style-type: lower-latin; */
+    /* list-style-type: none; */
+    /* list-style-position:inside ; */
+/* } */
+/* 
+.list li{
+    border: 1px solid red;
+    margin: 10px 0;
+} */
+
+
+.myTable{
+    width: 100%;
+    border: 1px solid black;
+    empty-cells: hide;
+    /* border-spacing: 30px; */
+    /* border-collapse: collapse; */
+}
+
+
+.myTable tr{
+    border: 2px solid red;
+    /* background-color: lightblue ; */
+
+    margin: 50px;
+    padding: 50px;
+
+}
+
+.myTable td ,  .myTable th {
+    border: 2px solid red;
+
+    margin: 50px;
+    padding: 20px;
+
+}
+
+
+
+.myTable2{
+    /* border: 1px solid black; */
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.myTable2 td , .myTable2 th{
+    /* border: 1px solid black; */
+    padding: 16px;
+    font-size: 28px;
+    text-align: center;
+}
+
+
+
+/* .myTable2 thead tr{
+    background-color: lightblue;
+} */
+
+.myTable2 thead th{
+    background-color: grey;
+    color: white;
+}
+
+.myTable2 tbody td{
+    background-color: lightgray;
+}
+
+
+
+
+.idharao{
+    /* background-color: aqua !important ; */
+}
+
+.row{
+    /* background-color: b; */
+}
+
+
+
+
+
+
+.btn{
+    background-color: lightblue;
+    border: none;
+    padding: 8px;
+    border-radius: 16px;
+}
+
+.btn:hover{
+    background-color: lightsalmon;
+    cursor: pointer;
+}
+
+
+.userName::placeholder{
+    color: red;
+}
+
+.userName:focus{
+    /* background-color: grey; */
+}
+
+/* :focus */
+
+
+
+
+
+.heading{
+    /* background-color: red; */
+    width: 100%;
+    height: 500px;
+    color: white;
+    background-image: url("./how-to-create-a-website-using-html.png") ;
+    background-repeat:no-repeat ;
+    background-size: cover;
+
+}

@@ -1,0 +1,76 @@
+/* online
+offline */
+
+.heading{
+    color: white;
+    width: 100%;
+    height: 400px;
+    background-image: url("./images/how-to-create-a-website-using-html.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    width: 100%;
+    height: 700px;
+    background-image: url("./images/photo-1544896478-d5b709d413c5.avif");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
+
+.box1{
+    background-color: red;
+    width: 250px;
+    height: 250px;
+    /* margin-left: 400px; */
+
+    /* position: relative;
+    left: 200px;
+    top: 500px; */
+
+}
+
+.box2{
+    background-color: blue;
+    width: 250px;
+    height: 250px;
+
+    /* position: static; //by default */
+    /* left: ;
+    right: ;
+    top: ;
+    bottom: ; */
+
+    /* position: static; // browser ki position ab change nhi kr sakty */
+    /* left: 200px; */
+
+
+    /* position: relative; */
+    /* left: 200px; */
+    /* top: 200px; */
+    /* margin-top: 200px; */
+
+    /* position: relative;
+    left: 800px;
+    top: 500px; */
+
+
+    /* position: absolute; */
+    /* top: 20px; */
+    /* right: 0;
+    top: 0; */
+    position: absolute;
+    bottom: 200px;
+    right: 100px;
+}
+
+.box3{
+    background-color: green;
+    width: 550px;
+    height: 350px;
+}

@@ -1,0 +1,127 @@
+/* body{
+    background-color: red;
+} */
+
+.box1 {
+    background-color: blue;
+
+    /* width: 300px; //fixed value */
+    /* width: 300px; */
+    /* max-width: 500px; */
+    /* min-width: 500px; */
+
+
+    /* max-width: 500px;
+    min-width: 300px; */
+
+    /* % */
+
+    width: 50%;
+
+}
+
+
+
+
+/* .box2{
+    background-color: blue;
+    width: 500px;
+}
+
+.para{
+    background-color: red;
+    /* width: 300px; */
+/* width: 40%; */
+/* }  */
+
+
+
+
+/* .box2{
+    background-color: red;
+    width: 50%;
+}
+
+.para{
+    background-color: blue;
+    width: 25%;
+} */
+
+
+
+
+
+
+.box2 {
+    /* color: white; */
+    /* background-color: lightblue; */
+    /* width: 500px; */
+    /* min-height: 400px; */
+    /* height: 400px; */
+    /* max-height: 400px; */
+
+    /* min-height: 300px; */
+    /* height: 300px; */
+    /* max-height: 300px; */
+    /* max-height: 300px; */
+}
+
+
+
+
+
+
+
+/* margin ==> ouside the container spacing k liye */
+
+.box3 {
+    background-color: lightgreen;
+    /* margin: 40px;
+    padding: 20px; */
+    /* margin: 20px; all direction  */
+    /* margin-bottom:50px ;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px; */
+
+    /* shorthand prop */
+    /* margin: single value ; */
+    /* margin: top right bottom left;  clock wise */
+    /* margin: 50px 100px 80px 70px; */
+    
+    /* margin: top to bottom  ||  left to right; */
+    /* margin: 100px 50px; */
+    /* margin: 100px; */
+
+
+    /* inside the container */
+    /* padding-left: 10px ; */
+    /* padding: 10px; */
+    /* margin: 10px; */
+    /* padding-right: ;
+    padding-top: ;
+    padding-bottom: ; */
+
+
+
+
+}
+
+
+
+.box3{
+    display: inline-block;
+    margin: 20px;
+
+}
+
+.box4 {
+    display: inline-block;
+    background-color: lightsalmon;
+    margin: 20px;
+}
+
+/* .links{
+    display: block;
+
+} */

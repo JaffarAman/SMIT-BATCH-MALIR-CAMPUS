@@ -1,0 +1,125 @@
+how to access daraz website?
+
+1. internet
+2. device
+3. browser
+
+
+=============
+HTML
+HYPER TEXT MARKUP LANGUGAGE
+
+binary --0 or 1
+
+
+HTML ky andar hamary pass "TAG" hoty hai
+
+
+
+2 types ky tag hoty hai hamary pass........
+opeing tag
+closing tag
+
+
+<html> ---> opening tag
+</html> --- closing tag
+
+
+<body> ---opeing tag
+</body> ---> closing tag
+
+
+
+<html>
+
+<body>
+
+	<h1> HELLO WORLD! </h1>
+
+</body>
+
+</html>
+
+
+
+
+
+
+html
+body
+
+
+Bold element
+<b></b>
+italic
+<i></i>
+
+
+Line Break
+self closing element
+<br />
+
+
+whitespace
+
+
+SuperScript -- math formulas
+subscript ---- chemistry formulas
+
+
+
+HTML ELEMENTS
+html
+head -- extra information
+title --- tab pr text show krta hai
+body ---- main website ka content 
+h1 to h6  --> heading 
+p ---  normal text paragraph
+b ---> bold
+i ---  italic
+self closing element
+br ---> line break
+hr =---> line break and line draw
+superscript --> math formulas
+subscript --> chem formulas
+ol ===>  order list - number list
+ul ==>  unorder list -- bullet list
+nested list ==> list ky andar list
+dl ==> defination list
+dt ===> defination term
+dd ===> defination describtion
+
+ek page sy dosry page pr jana hai?
+link == anchor 
+<!-- // anchor tag == <a></a> -->
+anchor tag - <a> ek page sy dosry page
+href = hyper reference => reference kaaha jana hai
+image = > img
+table
+tr ==> table row
+td ==> table data
+th ===> table heading
+thead
+tbody
+tfoot
+input == type=text , password , number , radio, checkbox , data , time , datetime-local , file, email
+maxLen , minLen , size , required
+select or  option
+form
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

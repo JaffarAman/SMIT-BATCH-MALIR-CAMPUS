@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box1 {
+    background-color: red;
+    width: 300px;
+    height: 300px;
+}
+
+.box2 {
+    background-color: green;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /* position: static; */
+
+    /* position: relative;
+    left: 200px;
+    top: 100px; */
+
+    /* position:relative;
+    left: 200px;
+    top: 0; */
+
+    /* top: ;
+    bottom: ;
+    left: ;
+    right: ; */
+
+
+    /* position: absolute;
+    left: 100px; */
+
+
+    /* position: absolute; */
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    /* left: 200px; */
+
+}
+
+
+.card {
+    margin: 50px auto;
+    width: 500px;
+    border: 1px solid black;
+    padding: 16px;
+    position: relative;
+}
+
+.card img {
+    /* width: 300px; */
+    width: 100%;
+}
+
+.card h1 {
+    font-size: 32px;
+    text-transform: uppercase;
+
+}
+
+
+
+.card p {
+    text-decoration: underline;
+}
+
+.card button {
+    margin: 20px 0;
+    padding: 18px;
+    border-radius: 16px;
+    width: 120px;
+    border: none;
+    background-color: lightblue;
+}
+
+
+.heartIcon {
+    background-color: white;
+    border: 1px solid black;
+    width: max-content;
+    padding: 8px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    /* top: 90px;
+    left: 960px; */
+    /* top: 0; */
+    /* bottom: 0; */
+}
+
+
+.navbar {
+    width: 100%;
+    background-color: lightblue;
+    padding: 30px;
+    position: sticky;
+    top: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    /* background-color: red; */
+    margin: 0 30px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar li:hover{
+    text-decoration: underline;
+}
+
+
+.navbar ul{
+    text-align: center;
+}

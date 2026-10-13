@@ -1,0 +1,7 @@
+row ky uper 
+margin or padding kam nai krty
+border
+
+col ky uper 
+margin kam nahi krta 
+padding kam krta hai bs....

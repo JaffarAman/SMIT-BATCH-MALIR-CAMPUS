@@ -1,0 +1,26 @@
+/* type selector */
+
+/* selector ==> h1 , p*/
+/* h1 {
+    color: red;
+    color: aqua;
+    background-color: black;
+} */
+
+/* p {
+    color: blue;
+} */
+
+
+/* id target using # */
+/* id selector */
+#heading2{
+    color: red;
+}
+
+
+/* class target using .(dot) */
+/* class selector */
+.para{  
+    color: blue;
+}

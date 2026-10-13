@@ -1,0 +1,88 @@
+.heading1 {
+    padding: 16px;
+    border: 1px solid red;
+    border-radius: 16px;
+}
+
+/* #heading {
+    background-color: red; */
+/* margin: 0; */
+/* margin: 20px 30px 50px 80px; */
+/* padding-left: 20px; */
+/* padding: 20px; */
+
+/* width: 400px; */
+/* margin-left: auto;
+    margin-right: auto; */
+/* text-align: center; */
+/* margin: 0  auto  ;
+    text-align: center;
+} */
+
+/* 
+.box1{
+    background-color: blue;
+    display: inline-block   ;
+} */
+
+
+.formContainer {
+    width: 40%;
+    margin: 100px auto;
+    padding: 30px;
+    border-radius: 16px;
+    background-color: lightgrey;
+}
+
+
+.inputField {
+    display: block;
+    width: 95%;
+    margin: 30px 0;
+    padding: 16px;
+    font-size: 24px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 16px;
+    /* background-color: red; */
+    /* background-color: transparent; */
+}
+
+.btn {
+    padding: 16px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    border: none;
+    /* border: 1px solid black; */
+    border-radius: 16px;
+    cursor: pointer;
+    background-color: lightblue;
+}
+
+
+.btn:hover {
+    background-color: blue;
+    color: white;
+}
+
+
+
+.heading {
+    font-size: 42px;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* text-align: center; */
+}
+
+
+
+.genderContainer p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.genderContainer label {
+    font-size: 24px;
+}
