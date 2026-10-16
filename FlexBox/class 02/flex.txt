@@ -1,0 +1,43 @@
+flex
+
+container -- parent element
+item -- child element
+
+
+display flex dehne k bad sary child ek row main ajaty hai default
+
+
+
+
+Flex direction row
+x -axis  -- horizontal align
+justify-content
+
+y-axis  - vertical align
+align-items
+
+
+Flex direction col
+x -axis  -- horizontal align
+align-items
+
+y-axis  - vertical align
+justify-content
+
+
+
+
+
+
+
+
+Flex direction Column
+x -axis 
+align-items
+
+y-axis
+justify-content
+
+
+
+
