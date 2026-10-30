@@ -1,0 +1,22 @@
+
+num1 = 200
+num2 = 500
+
+num1 + num2
+200 + 500 = 700
+
+
++ ==> concatenation / concate == two value ko merge
++ ==> addition ==> two value ko add krna 
+
+
+concate
+string + string ==> concate
+string + number ==> concate
+number + string ==> concate
+
+
+addition
+num + num == addition
+
+

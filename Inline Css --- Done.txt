@@ -55,6 +55,32 @@ border-collapse
 :focus
 
 
+position
+width: max-content;
+
+background image
+
+background image gradient
+
+
+
+display flex 
+justigy content
+alignitem
+gap
+flexwrap
+flex direction
+flex-grow
+order
+flex
+
+media query
+
+
+
+
+
+
 
 
 

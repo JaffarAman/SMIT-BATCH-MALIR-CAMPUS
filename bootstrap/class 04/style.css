@@ -1,0 +1,18 @@
+.mySlider img {
+    height: 400px;
+}
+
+/* .nextIcon , .prevIcon{
+    color: black !important;
+} */
+
+/*  */
+
+.carousel-control-prev,
+.carousel-control-next {
+    filter: invert(100%);
+}
+
+.cardModal .modal-dialog{
+    min-width: 60%;
+}

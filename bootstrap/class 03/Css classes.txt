@@ -1,0 +1,74 @@
+Css classes
+bg-primary
+bg-secondary
+bg-dark
+bg-danger
+bg-success
+bg-warning
+bg-info
+
+text-white
+text-dark
+text-danger
+
+
+margin
+m-0  to m-5
+
+m-0
+m-1 - 4px
+m-2 - 8px
+m-3 - 16px
+m-4 - 24px
+m-5 - 48px
+m6 - not exist
+
+mt -- margin top
+mb -- margin bottom
+ms -- margin start (margin left)
+me -- margin end (margin right)
+
+
+
+padding
+p-0  to p-5
+
+p-0
+p-1 - 4px
+p-2 - 8px
+p-3 - 16px
+p-4 - 24px
+p-5 - 48px
+p6 - not exist
+
+pt -- margin top
+pb -- margin bottom
+ps -- margin start (margin left)
+pe -- margin end (margin right)
+
+px -- x axis
+py -- y axis
+
+
+
+
+
+
+background
+color
+text-align
+margin
+padding
+flex
+
+<!-- Boxes -->
+container ----> center layout
+container-fluid ----> full width
+
+
+lg
+md
+sm
+
+
+

@@ -1,0 +1,9 @@
+hover
+focus
+first-child
+last=child
+placeholder
+
+active
+link
+
