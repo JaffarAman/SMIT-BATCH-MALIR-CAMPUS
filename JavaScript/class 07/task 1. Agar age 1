@@ -1,0 +1,9 @@
+Ek variable userAge banayein. Agar age 18 ya us se zyada ho to "You are eligible" show karein, warna "You are not eligible".
+
+Ek variable userName banayein. Agar name "Ali" ho to "Welcome Ali" show karein, warna "Unknown User".
+
+Ek variable marks banayein. Agar marks 50 ya us se zyada hon to "Pass" show karein, warna "Fail".
+
+Ek variable temperature banayein. Agar temperature 30 se zyada ho to "Hot Weather" show karein, warna "Normal Weather".
+
+Ek variable number banayein. Check karein ke number 100 ke equal hai ya nahi.

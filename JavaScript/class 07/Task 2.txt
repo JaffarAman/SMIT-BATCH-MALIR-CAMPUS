@@ -1,0 +1,36 @@
+JavaScript Conditional Statements
+Individual Practice • 20–25 Minutes
+
+Instructions: Har question ko JavaScript mein solve karna hai. prompt(), if aur else ka use karna hai.
+
+Q1. Age Checker
+
+User se age input lein. Agar age 18 ya zyada hai to "You can vote" show karein, warna "You cannot vote".
+
+Q2. Gender Checker
+
+User se gender input lein. Agar gender male hai to "Male User" show karein, warna "Other User".
+
+Q3. Marks Checker
+
+User se marks lein. Agar marks 33 ya zyada hain to "Pass", warna "Fail".
+
+Q4. Password Checker
+
+User se password lein. Agar password "12345" hai to "Login Successful", warna "Wrong Password".
+
+Q5. Even Age Checker
+
+User se age lein. Agar age 15 se kam ya equal hai to "Junior Student", warna "Senior Student".
+
+Q6. Shopping Checker
+
+User se shopping amount lein. Agar amount 5000 ya zyada hai to "You get a discount", warna "No discount".
+
+Q7. Number Checker
+
+User se number lein. Agar number 0 se bara hai to "Positive Number", warna "Zero or Negative Number".
+
+Q8. Equal Checker
+
+Do numbers input lein. Agar dono equal hain to "Both are equal", warna "Both are different".
